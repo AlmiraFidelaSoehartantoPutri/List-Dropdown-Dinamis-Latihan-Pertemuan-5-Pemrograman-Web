@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Tambahkan pustaka Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Gaya tambahan (bukan dari Bootstrap) */
+    .custom-select {
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>Daftar Dropdown Dinamis</h1>
+    
+    <div class="form-group">
+      <label for="dropdownSelect">Pilih Opsi:</label>
+      <select class="custom-select" id="dropdownSelect">
+        <option value="" disabled selected>Pilih opsi</option>
+      </select>
+    </div>
+  </div>
+
+  <script>
+    // Data opsi dropdown dinamis
+    const dynamicOptions = [
+      'Opsi 1',
+      'Opsi 2',
+      'Opsi 3',
+      'Opsi 4',
+      'Opsi 5',
+    ];
+
+    // Fungsi untuk membuat dan memasukkan opsi-opsi ke dalam dropdown
+    function populateDropdown() {
+      const dropdownSelect = document.getElementById('dropdownSelect');
+
+      for (let i = 0; i < dynamicOptions.length; i++) {
+        const option = document.createElement('option');
+        option.text = dynamicOptions[i];
+        option.value = dynamicOptions[i];
+        dropdownSelect.appendChild(option);
+      }
+    }
+
+    // Panggil fungsi untuk mengisi dropdown saat halaman dimuat
+    populateDropdown();
+  </script>
+
+  <!-- Tambahkan pustaka Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com
